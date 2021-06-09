@@ -1,5 +1,5 @@
 <template>
-    <jet-authentication-card>
+    <jet-authentication-card class="form-login--background">
         <template #logo>
             <jet-authentication-card-logo />
         </template>
@@ -33,7 +33,11 @@
                     Forgot your password?
                 </inertia-link>
 
-                <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
+                <inertia-link href="/" class="btn--outline-menu ml-4 inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                  Back
+                </inertia-link>
+
+                <jet-button :class="'ml-4  btn--menu ' + { 'opacity-25': form.processing }" :disabled="form.processing">
                     Log in
                 </jet-button>
             </div>

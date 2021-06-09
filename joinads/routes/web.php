@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientsController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,14 @@ Route::get('/', function () {
     ]);
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return Inertia::render('Dashboard');
+// })->name('dashboard');
+
+Route::group(['middleware' => ['auth:sanctum', 'verified']], function () 
+{
+  Route::get('/dashboard', [ClientsController::class, 'index'])->name('dashboard');
+  Route::get('/create/{id?}', [ClientsController::class, 'create'])->name('dashboard.create');
+  Route::post('/createOrUpdate', [ClientsController::class, 'createOrUpdate'])->name('dashboard.store');
+  Route::post('/destroy', [ClientsController::class, 'destroy'])->name('dashboard.store');
+});

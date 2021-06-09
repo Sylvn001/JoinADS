@@ -43,6 +43,10 @@
               <inertia-link :href="route('login')" class="">
                   Already registered?
               </inertia-link>
+              
+              <inertia-link href="/" class="btn--outline-menu ml-4 inline-flex items-center px-4 py-2 rounded-md font-semibold text-xs uppercase tracking-widest focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+                Back
+              </inertia-link>
 
               <jet-button class="ml-4" :class="'btn btn--menu ' + { 'opacity-25': form.processing }" :disabled="form.processing">
                   Register

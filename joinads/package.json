@@ -18,6 +18,8 @@
         "@vue/compiler-sfc": "^3.0.5",
         "autoprefixer": "^10.2.6",
         "axios": "^0.21",
+        "browser-sync": "^2.26.14",
+        "browser-sync-webpack-plugin": "^2.3.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.3.0",
@@ -25,5 +27,13 @@
         "tailwindcss": "^2.1.4",
         "vue": "^3.0.5",
         "vue-loader": "^16.1.2"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.35",
+        "@fortawesome/free-brands-svg-icons": "^5.15.3",
+        "@fortawesome/free-regular-svg-icons": "^5.15.3",
+        "@fortawesome/free-solid-svg-icons": "^5.15.3",
+        "@fortawesome/vue-fontawesome": "^3.0.0-4",
+        "vuelidate": "^0.7.6"
     }
 }

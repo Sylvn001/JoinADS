@@ -2,6 +2,25 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/*HOME PAGE || DASHBOARD*/
+#dashboard-img__right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#dashboard--img{
+  background: url("/images/assets/dashboard_1.svg") right bottom no-repeat;
+  background-size: 35%;
+}
+
+.form-login--background{
+  background: url("/images/assets/dashboard_2.svg") right bottom no-repeat;
+  background-size: 35%;
+}
+
+/*BUTTONS*/
 
 .btn{
   @apply font-bold py-2 px-4 rounded;
@@ -15,18 +34,24 @@
   @apply bg-green-700 text-white;
 }
 
-#dashboard-img__right{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
+.btn--outline-menu{
+  @apply border border-green-700 text-green-600 bg-white;
 }
 
-.form-login--background{
-  background: url("/images/assets/dashboard_2.svg") right bottom no-repeat;
-  background-size: 35%;
+.btn--outline-menu:hover{
+  @apply bg-green-700 text-white;
 }
 
+.green--custom{
+  color:#108f83;
+}
+
+/** Form, inputs... **/
+.form--container__middle{
+  @apply flex flex-col justify-center items-center;
+}
+
+/*Colors*/
 
 .bg-gray-100 {
   background-color: #f7fafc;
@@ -63,6 +88,7 @@
   color: rgba(26, 32, 44, var(--tw-text-opacity));
 }
 
+/*Medias Query*/
 
 @media (max-width: 991.98px){
   .form-login--background{
@@ -77,4 +103,5 @@
   .form-login--background{
     background-size: 95%;
   }
+
 }

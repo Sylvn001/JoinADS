@@ -16,8 +16,10 @@ mix.js('resources/js/app.js', 'public/js').vue()
         require('postcss-import'),
         require('tailwindcss'),
     ])
+    .vue()
+    .browserSync('')
+    .disableNotifications()
     .webpackConfig(require('./webpack.config'));
-
 if (mix.inProduction()) {
     mix.version();
 }

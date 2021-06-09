@@ -33373,6 +33373,27 @@ select {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+/*HOME PAGE || DASHBOARD*/
+
+#dashboard-img__right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#dashboard--img{
+  background: url("/images/assets/dashboard_1.svg") right bottom no-repeat;
+  background-size: 35%;
+}
+
+.form-login--background{
+  background: url("/images/assets/dashboard_2.svg") right bottom no-repeat;
+  background-size: 35%;
+}
+
+/*BUTTONS*/
+
 .btn{
   border-radius: 0.25rem;
   font-weight: 700;
@@ -33396,17 +33417,37 @@ select {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
-#dashboard-img__right{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
+.btn--outline-menu{
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: rgba(4, 120, 87, var(--tw-border-opacity));
+  border-width: 1px;
+  --tw-text-opacity: 1;
+  color: rgba(5, 150, 105, var(--tw-text-opacity));
 }
 
-.form-login--background{
-  background: url("/images/assets/dashboard_2.svg") right bottom no-repeat;
-  background-size: 35%;
+.btn--outline-menu:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(4, 120, 87, var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
+
+.green--custom{
+  color:#108f83;
+}
+
+/** Form, inputs... **/
+
+.form--container__middle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Colors*/
 
 .bg-gray-100 {
   background-color: #f7fafc;
@@ -33442,6 +33483,8 @@ select {
   color: #1a202c;
   color: rgba(26, 32, 44, var(--tw-text-opacity));
 }
+
+/*Medias Query*/
 
 @media (max-width: 991.98px){
   .form-login--background{
